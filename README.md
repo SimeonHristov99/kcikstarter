@@ -13,8 +13,9 @@ Course project for "Data Mining" university course.
 - [X] Load data.
 - [X] Data audit and information value analysis.
 - [X] Feature Engineer: use date columns to make durations (in load data notebook).
-- [ ] Finish univariate analysis.
+- [X] Finish univariate analysis.
 - [ ] PyCaret.
+- [ ] Text preprocessing.
 
 ## Resources
 
