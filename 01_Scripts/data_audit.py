@@ -51,8 +51,11 @@ class DataAudit:
 
         # Construct skeleton of data audit dataframe
         self.data_audit_summary = (
-            self.df.describe(include="all", percentiles=[0.5])
-            .T.convert_dtypes()
+            self.df.describe(
+                include="all",
+                percentiles=[0.5],
+                datetime_is_numeric=True
+            ).T.convert_dtypes()
             .reset_index(drop=False, names="Variable")
             .drop(["top", "freq"], axis=1)
         )
@@ -108,6 +111,7 @@ class DataAudit:
             )
             flag_frequencies = flag_frequencies.fillna("NA")
             self.feature_dfs[feature[: self._feature_name_limit]] = flag_frequencies
+        pbar.set_postfix_str(f"Done!")
 
         # Reorder and format the columns
         self.data_audit_summary = self.data_audit_summary[self.columns]
