@@ -14,7 +14,7 @@ Course project for "Data Mining" university course.
 - [X] Data audit and information value analysis.
 - [X] Feature Engineer: use date columns to make durations (in load data notebook).
 - [X] Finish univariate analysis.
-- [ ] PyCaret without text features.
+- [X] PyCaret without text features.
 - [ ] Move missing value handling to first notebook.
 - [ ] Text preprocessing: stopwords removal.
 - [ ] Text preprocessing: convert numbers to their word equivalent.
@@ -29,3 +29,5 @@ Course project for "Data Mining" university course.
 ## Resources
 
 - [Predicting the success of crowdfunding](https://cs230.stanford.edu/projects_spring_2018/reports/8289614.pdf)
+- [PyCaret Classification API](https://pycaret.readthedocs.io/en/stable/api/classification.html)
+- [PyCaret Workflow](https://towardsdatascience.com/introduction-to-binary-classification-with-pycaret-a37b3e89ad8d)
