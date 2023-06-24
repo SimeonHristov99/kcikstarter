@@ -15,16 +15,17 @@ Course project for "Data Mining" university course.
 - [X] Feature Engineer: use date columns to make durations (in load data notebook).
 - [X] Finish univariate analysis.
 - [X] PyCaret without text features.
-- [ ] Move missing value handling to first notebook.
+- [X] Move missing value handling to first notebook.
+- [X] Restructure code.
 - [ ] Text preprocessing: stopwords removal.
 - [ ] Text preprocessing: convert numbers to their word equivalent.
 - [ ] Text preprocessing: leave only words.
 - [ ] Text preprocessing: stemming.
 - [ ] Text preprocessing: lemmatization.
-- [ ] PyCaret: try again with preprocessed text features.
-- [ ] PyCaret: try with PCA.
 - [ ] Construct a tf-idf matrix.
-- [ ] Try PyCaret with tf-idf matrix.
+- [ ] Use Glove word embeddings.
+- [ ] Try out an RNN with tf-idf matrix.
+- [ ] Try out an RNN with Glove word embeddings.
 
 ## Resources
 
