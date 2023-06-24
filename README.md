@@ -17,6 +17,9 @@ Course project for "Data Mining" university course.
 - [X] PyCaret without text features.
 - [X] Move missing value handling to first notebook.
 - [X] Restructure code.
+- [X] Save PyCaret models plots with performance analysis.
+- [ ] Try to learn word embeddings.
+- [ ] Try to use Glove word embeddings.
 - [ ] Text preprocessing: stopwords removal.
 - [ ] Text preprocessing: convert numbers to their word equivalent.
 - [ ] Text preprocessing: leave only words.
