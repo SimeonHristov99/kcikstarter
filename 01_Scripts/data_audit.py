@@ -15,9 +15,9 @@ class DataAudit:
     def __init__(self):
         self.summary_sheet_name: str = "Summary"
         self._feature_name_limit: int = 31
-        self.df: pd.DataFrame = None
-        self.data_audit_summary: pd.DataFrame = None
-        self.feature_dfs: dict(str, pd.DataFrame) = {}
+        self.df: pd.DataFrame | None = None
+        self.data_audit_summary: pd.DataFrame | None = None
+        self.feature_dfs: dict[str, pd.DataFrame] = {}
         self.columns: List[str] = [
             "Variable",
             "Label",
@@ -35,14 +35,12 @@ class DataAudit:
     def fit(
         self,
         df: pd.DataFrame,
-        target_feature: pd.Series,
-        selection_set: List[str] = None,
+        selection_set: List[str] | None = None,
     ) -> None:
         """Create the table with statisitcs for each variable.
 
         Args:
             df (pd.DataFrame): A dataframe with the features for which the analysis will be done.
-            target_feature (pd.Series): A series with the target values for each observation in `df`.
             selection_set (List[str], optional): A list of variables for which to perform the analysis (has to be a subset of `df.columns`). Defaults to None.
         """
         df = df.copy()
@@ -123,6 +121,9 @@ class DataAudit:
         Args:
             filepath (str): Fully qualified path (including name and extension of the file) to file in which to save the audit.
         """
+        if self.data_audit_summary is None:
+            raise RuntimeError('Please run the "fit" method first.')
+        
         with pd.ExcelWriter(filepath) as writer:
             self.data_audit_summary.to_excel(
                 excel_writer=writer, sheet_name=self.summary_sheet_name
@@ -159,6 +160,9 @@ class DataAudit:
             that will be appended in the order they are passed
             to the end of the data audit summary table.
         """
+        if self.data_audit_summary is None:
+            raise RuntimeError('Please run the "fit" method first.')
+        
         for col in columns:
             self.data_audit_summary = pd.merge(
                 self.data_audit_summary,
@@ -177,6 +181,9 @@ class DataAudit:
         Returns:
             Optional[pd.DataFrame]: A copy of the data audit summary table. Only done if `display_only=False`
         """
+        if self.data_audit_summary is None:
+            raise RuntimeError('Please run the "fit" method first.')
+        
         if not display_only:
             return self.data_audit_summary.copy()
 
