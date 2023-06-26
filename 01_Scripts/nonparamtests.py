@@ -7,6 +7,22 @@ from scipy import stats
 from sklearn.metrics import adjusted_mutual_info_score
 
 
+def calculate_chi_sq(
+    df: pd.DataFrame,
+    selection_set: List[str],
+    target_feature: pd.Series,
+    col_name: str='PVALUE_CHI_SQUARE',
+) -> pd.Series:
+
+    result = pd.Series(index=selection_set, data=selection_set, name=col_name).map(
+        lambda feature: stats.chi2_contingency(
+            pd.crosstab(df[feature], target_feature, dropna=False)
+            )[1]
+    )
+
+    return result
+
+
 def calculate_ami(
     df: pd.DataFrame,
     selection_set: List[str],
@@ -38,13 +54,13 @@ def calculate_ami(
     ))
 
     return result
-    
+
 
 def calculate_kruskal(
     df: pd.DataFrame,
     selection_set: List[str],
     target_feature: pd.Series,
-    col_name: str='KRUSKAL',
+    col_name: str='PVALUE_KRUSKAL',
     ) -> pd.Series:
     """Perform the Kruskal–Wallis one-way analysis of variance test between a numeric feature and a categorical feature.
 
