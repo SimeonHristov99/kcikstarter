@@ -21,26 +21,15 @@ Course project for "Data Mining" university course.
 - [X] Make regressor for number of backers.
 - [X] Add chi-sq.
 - [X] Make regressor for log transform number of backers.
-- [ ] Use regressor and classifier on test set.
-- [ ] One-hot encode cateogircal features.
-- [ ] Scale numbers.
+- [X] Evaluate model.
+- [X] Use regressor and classifier on test set.
+- [ ] Check if adding text features improves performance.
+  - [ ] One-hot encode cateogircal features.
+  - [ ] Scale numbers.
 - [ ] Use GloVE or an alternative to embed text.
 - [ ] Pass resulting matrix to pretrained BERT and use the "Trainer" class.
 - [ ] Experiment with HDBSCAN to check for a pattern for the target variable.
 - [ ] Start documentation.
-
-## Icebox
-
-- [ ] Try to learn word embeddings.
-- [ ] Try to use Glove word embeddings.
-- [ ] Text preprocessing: stopwords removal.
-- [ ] Text preprocessing: convert numbers to their word equivalent.
-- [ ] Text preprocessing: stemming.
-- [ ] Text preprocessing: lemmatization.
-- [ ] Text preprocessing: leave only words.
-- [ ] Construct a tf-idf matrix.
-- [ ] Try out an RNN with tf-idf matrix.
-- [ ] Try out an RNN with Glove word embeddings.
 
 ## Resources
 
