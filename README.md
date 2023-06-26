@@ -48,4 +48,4 @@ Course project for "Data Mining" university course.
 - [Predicting the success of crowdfunding](https://cs230.stanford.edu/projects_spring_2018/reports/8289614.pdf)
 - [PyCaret Classification API](https://pycaret.readthedocs.io/en/stable/api/classification.html)
 - [PyCaret Workflow](https://towardsdatascience.com/introduction-to-binary-classification-with-pycaret-a37b3e89ad8d)
-- []()
+- [Box-Cox Transform](https://towardsdatascience.com/top-3-methods-for-handling-skewed-data-1334e0debf45)
