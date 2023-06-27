@@ -13,6 +13,8 @@ def calculate_chi_sq(
     target_feature: pd.Series,
     col_name: str='PVALUE_CHI_SQUARE',
 ) -> pd.Series:
+    
+    target_feature = target_feature.copy().astype(str)
 
     result = pd.Series(index=selection_set, data=selection_set, name=col_name).map(
         lambda feature: stats.chi2_contingency(
