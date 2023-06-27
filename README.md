@@ -23,13 +23,7 @@ Course project for "Data Mining" university course.
 - [X] Make regressor for log transform number of backers.
 - [X] Evaluate model.
 - [X] Use regressor and classifier on test set.
-- [ ] Check if adding text features improves performance.
-  - [ ] One-hot encode cateogircal features.
-  - [ ] Scale numbers.
-- [ ] Use GloVE or an alternative to embed text.
-- [ ] Pass resulting matrix to pretrained BERT and use the "Trainer" class.
-- [ ] Experiment with HDBSCAN to check for a pattern for the target variable.
-- [ ] Start documentation.
+- [X] Experiment with a shallow (non-recurrent) neural network.
 
 ## Resources
 
